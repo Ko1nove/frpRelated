@@ -124,6 +124,27 @@ If you are using a cloud provider (e.g., Alibaba Cloud, Tencent Cloud), make sur
 
 ---
 
+## Running frpc in the Background (Silent at Startup)
+
+`frpc.exe -c frpc.toml` runs as a foreground process — if you close its window the connection will be terminated.  
+To run frpc silently in the background at boot/login, one convenient method is to use **Windows Task Scheduler**.
+
+Steps (Task Scheduler):
+1. Open **Task Scheduler** → **Create Basic Task** (or **Create Task** for more options).  
+2. Choose a trigger: **At log on** or **At startup**.  
+3. Action: **Start a program**. Fill in:
+   - **Program/script**:  
+     `C:\Users\YOU\frp_0.64.0_windows_amd64\frpc.exe`
+   - **Add arguments (optional)**:  
+     `-c frpc.toml`
+   - **Start in (optional)**: the folder containing `frpc.exe` (e.g. `C:\Users\YOU\frp_0.64.0_windows_amd64`)
+4. Check **Run with highest privileges** (to ensure permissions).  
+5. In the **General** tab, choose the option to run hidden / do not show a window (or select “Run whether user is logged on or not” and set it to hidden if available).
+
+After this, frpc will start in the background on boot/login and will not show a black console window.
+
+---
+
 ### Quick Checklist
 
 * ✅ Server: `7000/tcp` open
