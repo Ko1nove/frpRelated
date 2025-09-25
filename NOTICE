@@ -1,0 +1,17 @@
+This repository includes unmodified binary releases of frp,
+which is licensed under the Apache License, Version 2.0.
+
+Project: frp
+Source: https://github.com/fatedier/frp
+License: Apache License 2.0 (see below)
+
+All configuration files and documentation created in this repository
+are licensed under the MIT License (see LICENSE file).
+
+---------------------------------------------------------------------
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+[You may include the full Apache-2.0 license text here, or just keep
+a copy of the original LICENSE file from frp alongside the binaries.]
